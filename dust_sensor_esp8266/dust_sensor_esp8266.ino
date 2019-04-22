@@ -3,11 +3,8 @@
 #include <PMS.h>
 #include <DHT.h>
 
-//const char* ssid      = "CSCMU_IoT";
-//const char* password  = "c$smartroom";
-
-const char* ssid      = "NetworkLab AirStream";
-const char* password  = "netlab310";
+const char* ssid      = "ssid";
+const char* password  = "password";
 const char* host      = "dweet.io";
 
 #define DHTPIN  D5
@@ -19,14 +16,13 @@ PMS pms(pms_serial);
 PMS::DATA data;
 DHT dht(DHTPIN, DHT11);
 
-const char* thing  = "phinx598_cscmu";
+const char* thing  = "thing_name";
 
 float h         = 0;
 float t         = 0;
 float pm1_0     = 0;
 float pm2_5     = 0;
 float pm10_0    = 0;
-
 
 void setup()
 {
@@ -131,7 +127,7 @@ void loop()
 
         Serial.println();
         Serial.println("closing connection");
-        
+
     }
 
 }
